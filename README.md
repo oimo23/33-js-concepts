@@ -23,9 +23,9 @@
 
 このリポジトリは、開発者がJavaScriptの概念をより習得できるようにすることを目的として作成されました。  
 これらは必須知識ではありませんが、より深い理解に役立つでしょう。  
-    
-原著 [Stephen Curtis]（https://twitter.com/stephenthecurt）　　
-[https://medium.com/@stephenthecurt/33-fundamentals-every-javascript]。 -developer-should-know-13dd720a90d1）
+　   
+[Stephen Curtis](https://twitter.com/stephenthecurt)著 の記事に基づくものです。  
+その記事は[こちら](https://medium.com/@stephenthecurt/33-fundamentals-every-javascript-developer-should-know-13dd720a90d1)で読めます。
 
 **🚀 GitHubの2018年のトップオープンソースプロジェクトの1つとして取り上げられました！(https://blog.github.com/2018-12-13-new-open-source-projects/)**
 
@@ -54,39 +54,39 @@
 
 ## 目次 (table-of-contents)
 
-1. **[コールスタック (Call Stack)](#1-call-stack-))**
-2. **[プリミティブ型 (Primitive Types)](#2-primitive-types-)**
-3. **[値型と参照型 (Value Types and Reference Types)](#3-value-types-and-reference-types-)**
+1. **[コールスタック (Call Stack)](#1-コールスタック-call-stack)**
+2. **[プリミティブ型 (Primitive Types)](#2-プリミティブ型-primitive-types)**
+3. **[値型と参照型 (Value Types and Reference Types)](#3-値型と参照型-value-types-and-reference-types)**
 4. **[Implicit, Explicit, Nominal, Structuring and Duck Typing](#4-implicit-explicit-nominal-structuring-and-duck-typing)**
-5. **[== vs === vs typeof](#5-vs-vs-typeof)**
-6. **[関数スコープ、ブロックスコープ、静的スコープ (Function Scope, Block Scope and Lexical Scope)](#6-function-scope-block-scope-and-lexical-scope-)**
-7. **[式 (Expression) vs 文字 (Statement)](#7-expression-vs-statement-)**
-8. **[即時関数、モジュール、名前空間　(IIFE, Modules and Namespaces)](#8-iife-modules-and-namespaces-)**
-9. **[メッセージキューとイベントループ (Message Queue and Event Loop)](#9-message-queue-and-event-loop-)**
+5. **[== vs === vs typeof](#5--vs--vs-typeof)**
+6. **[関数スコープ、ブロックスコープ、静的スコープ (Function Scope, Block Scope and Lexical Scope)](#6-関数スコープブロックスコープ静的スコープ-function-scope-block-scope-and-lexical-scope)**
+7. **[式 (Expression) vs 文字 (Statement)](#7-式-expression-vs-文字-statement)**
+8. **[即時関数、モジュール、名前空間　(IIFE, Modules and Namespaces)](#8-即時関数モジュール名前空間iife-modules-and-namespaces)**
+9. **[メッセージキューとイベントループ (Message Queue and Event Loop)](#9-メッセージキューとイベントループ-message-queue-and-event-loop)**
 10. **[setTimeout, setInterval and requestAnimationFrame](#10-settimeout-setinterval-and-requestanimationframe)**
-11. **[JavaScriptエンジン (JavaScript Engines)](#11-javascript-javascript-engines-)**
-12. **[ビット演算子、型付き配列、バッファ (Bitwise Operators, Type Arrays and Array Buffers)](#12-bitwise-operators-type-arrays-and-array-buffers-)**
-13. **[DOMとレイアウトツリー (DOM and Layout Trees)](#13-dom-dom-and-layout-trees-)**
-14. **[ファクトリとクラス (Factories and Classes)](#14-factories-and-classes-)**
+11. **[JavaScriptエンジン (JavaScript Engines)](#11-javascriptエンジン-javascript-engines)**
+12. **[ビット演算子、型付き配列、バッファ (Bitwise Operators, Type Arrays and Array Buffers)](#12-ビット演算子型付き配列バッファ-bitwise-operators-type-arrays-and-array-buffers)**
+13. **[DOMとレイアウトツリー (DOM and Layout Trees)](#13-domとレイアウトツリー-dom-and-layout-trees)**
+14. **[ファクトリとクラス (Factories and Classes)](#14-ファクトリとクラス-factories-and-classes)**
 15. **[this, call, apply and bind](#15-this-call-apply-and-bind)**
 16. **[new, Constructor, instanceof and Instances](#16-new-constructor-instanceof-and-instances)**
-17. **[プロトタイプ継承とプロトタイプチェーン (Prototype Inheritance and Prototype Chain)](#17-prototype-inheritance-and-prototype-chain-)**
-18. **[Object.createとObject.assign (Object.create and Object.assign)](#18-object-create-object-assign-object-create-and-object-assign-)**
+17. **[プロトタイプ継承とプロトタイプチェーン (Prototype Inheritance and Prototype Chain)](#17-プロトタイプ継承とプロトタイプチェーン-prototype-inheritance-and-prototype-chain)**
+18. **[Object.createとObject.assign (Object.create and Object.assign)](#18-objectcreateとobjectassignobjectcreate-and-objectassign)**
 19. **[map, reduce, filter](#19-map-reduce-filter)**
-20. **[純粋関数、副作用、状態の変化 (Pure Functions, Side Effects and State Mutation)](#20-pure-functions-side-effects-and-state-mutation-)**
-21. **[クロージャ (Closures)](#21-closures-)**
-22. **[高階関数 (High Order Functions)](#22-high-order-functions-)**
-23. **[再帰 (Recursion)](#23-recursion-)**
-24. **[コレクションとジェネレータ (Collections and Generators)](#24-collections-and-generators-)**
-25. **[プロミス (Promises)](#25-promises-)**
+20. **[純粋関数、副作用、状態の変化 (Pure Functions, Side Effects and State Mutation)](#20-純粋関数副作用状態の変化-pure-functions-side-effects-and-state-mutation)**
+21. **[クロージャ (Closures)](#21-クロージャ-closures)**
+22. **[高階関数 (High Order Functions)](#22-高階関数-high-order-functions)**
+23. **[再帰 (Recursion)](#23-再帰-recursion)**
+24. **[コレクションとジェネレータ (Collections and Generators)](#24-コレクションとジェネレータ-collections-and-generators)**
+25. **[プロミス (Promises)](#25-プロミス-promises)**
 26. **[async/await](#26-asyncawait)**
-27. **[データ構造 (Data Structures)](#27-data-structures-)**
-28. **[高負荷処理とBigO記法 (Expensive Operation and Big O Notation)](#28-bigo-expensive-operation-and-big-o-notation-)**
-29. **[アルゴリズム (Algorithms)](#29-algorithms-)**
-30. **[継承、ポリモーフィズム、コードの再利用 (Inheritance, Polymorphism and Code Reuse)](#30-inheritance-polymorphism-and-code-reuse-)**
-31. **[デザインパターン (Design Patterns)](#31-design-patterns-)**
-32. **[部分適用、カリー化、ComposeとPipe (Partial Applications, Currying, Compose and Pipe)](#32-compose-pipe-partial-applications-currying-compose-and-pipe-)**
-33. **[綺麗なコード (Clean Code)](#33-clean-code-)**
+27. **[データ構造 (Data Structures)](#27-データ構造-data-structures)**
+28. **[高負荷処理とBigO記法 (Expensive Operation and Big O Notation)](#28-高負荷処理とbigo記法-expensive-operation-and-big-o-notation)**
+29. **[アルゴリズム (Algorithms)](#29-アルゴリズム-algorithms)**
+30. **[継承、ポリモーフィズム、コードの再利用 (Inheritance, Polymorphism and Code Reuse)](#30-継承ポリモーフィズムコードの再利用-inheritance-polymorphism-and-code-reuse)**
+31. **[デザインパターン (Design Patterns)](#31-デザインパターン-design-patterns)**
+32. **[部分適用、カリー化、ComposeとPipe (Partial Applications, Currying, Compose and Pipe)](#32-部分適用カリー化composeとpipe-partial-applications-currying-compose-and-pipe)**
+33. **[綺麗なコード (Clean Code)](#33-綺麗なコード-clean-code)**
 
 
 ---
@@ -116,7 +116,7 @@
  * 🎥 [The Ultimate Guide to Execution Contexts, Hoisting, Scopes, and Closures in JavaScript — Tyler McGinnis](https://www.youtube.com/watch?v=Nt-qa_LlUH0)
   * 🎥 [What the heck is the event loop anyway? — Philip Roberts](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -142,7 +142,7 @@
  * 🎥 [Everything you never wanted to know about JavaScript numbers — Bartek Szopka](https://www.youtube.com/watch?v=MqHDDtVYJRI)
  * 🎥 [What are variables in Javascript? — JS For Everyone](https://www.youtube.com/watch?v=B4Bbmei_thw)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -165,7 +165,7 @@
  * 🎥 [Javascript Pass by Value vs Pass by Reference — techsith](https://www.youtube.com/watch?v=E-dAnFdq8k8)
  * 🎥 [JavaScript Value vs Reference Types — Programming with Mosh](https://www.youtube.com/watch?v=fD0t_DKREbE)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -186,7 +186,7 @@
  * 🎥 [Coercion in Javascript - Hitesh Choudhary](https://www.youtube.com/watch?v=b04Q_vyqEG8)
  * 🎥 [JavaScript Questions: What is Coercion? - Steven Hancock](https://www.youtube.com/watch?v=z4-8wMSPJyI)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -210,7 +210,7 @@
  * 🎥 [JavaScript - The typeof operator — Java Brains](https://www.youtube.com/watch?v=ol_su88I3kw)
  * 🎥 [Javascript typeof operator — DevDelight](https://www.youtube.com/watch?v=qPYhTPt_SbQ)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -237,7 +237,7 @@
  * 🎥 [JavaScript Block Scope and Function Scope — mmtuts](https://www.youtube.com/watch?v=aK_nuUAdr8E)
  * 🎥 [What the Heck is Lexical Scope? — NWCalvank](https://www.youtube.com/watch?v=GhNA0r10MmA)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -257,7 +257,7 @@
  * 🎥 [JavaScript - Expression vs. Statement — WebTunings](https://www.youtube.com/watch?v=3jDpNGJkupA)
  * 🎥 [Function Statements and Function Expressions — Codeacademy](https://www.youtube.com/watch?v=oB5rH_9bqAI)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -286,7 +286,7 @@
  * 🎥 [ES6 Modules in the Real World — Sam Thorogood](https://www.youtube.com/watch?v=fIP4pjAqCtQ)
  * 🎥 [ES6 Modules — TempleCoding](https://www.youtube.com/watch?v=5P04OK6KlXA)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -314,7 +314,7 @@
  * 🎥 [Desmitificando el Event Loop (Spanish)](https://www.youtube.com/watch?v=Eqq2Rb7LzYE)
 
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -337,7 +337,7 @@
  * 🎥 [JavaScript setTimeout, setInterval & clearInterval — DoingITeasyChannel](https://www.youtube.com/watch?v=BVALvvy5bZY)
  * 🎥 [JavaScript setTimeOut and setInterval Explained — Theodore Anderson](https://www.youtube.com/watch?v=mVKfrWCOB60)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -360,7 +360,7 @@
 
  * 🎥 [JavaScript Engines: The Good Parts™ — Mathias Bynens & Benedikt Meurer](https://www.youtube.com/watch?v=5nmpokoRaZI)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -378,7 +378,7 @@
 
  * 🎥 [JavaScript Bitwise Operators — Programming with Mosh](https://www.youtube.com/watch?v=mesu75PTDC8)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -401,7 +401,7 @@
  * 🎥 [JavaScript DOM — The Net Ninja](https://www.youtube.com/watch?v=FIORjGvT0kk)
  * 🎥 [JavaScript DOM Crash Course — Traversy Media](https://www.youtube.com/watch?v=0ik6X4DJKCc)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -425,7 +425,7 @@
  * 🎥 [Factory Functions in JavaScript — Fun Fun Function](https://www.youtube.com/watch?v=ImwrezYhw4w)
  * 🎥 [Javascript Tutorial Function Factories — Crypto Chan](https://www.youtube.com/watch?v=R7-IwpH80UE)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -461,7 +461,7 @@
  * 🎥 [JavaScript Practical Applications of Call, Apply and Bind functions — techsith](https://www.youtube.com/watch?v=AYVYxezrMWA)
  * 🎥 [JS Function Methods call(), apply(), and bind() — Steve Griffith](https://www.youtube.com/watch?v=uBdH0iB1VDM)
  
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -479,7 +479,7 @@
  * 📜 [JavaScript instanceof vs typeof — Gary Rafferty](http://garyrafferty.com/2012/12/07/JavaScript-instanceof-vs-typeof.html)
  * 📜 [Function and Object, instances of each other — Kiro Risk](https://javascriptrefined.io/function-and-object-instances-of-each-other-1e1095d5faac)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -522,7 +522,7 @@
  * 🎥 [Prototypes in Javascript - p5.js Tutorial — The Coding Train](https://www.youtube.com/watch?v=hS_WqkyUah8)
 
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -548,7 +548,7 @@
  * 🎥 [Object.assign() explained — Aaron Writes Code](https://www.youtube.com/watch?v=aw7NfYhR5rc)
  * 🎥 [Object.assign() Method — techsith](https://www.youtube.com/watch?v=9Ky4X6inpi4)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -593,7 +593,7 @@
  * 🎥 [Reduce basics - Part 3 of FP in JavaScript - Fun Fun Function](https://www.youtube.com/watch?v=Wl98eZpkp-c)
  * 🎥 [Reduce Advanced - Part 4 of FP in JavaScript - Fun Fun Function](https://www.youtube.com/watch?v=1DMolJ2FrNY&t=621s)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -627,7 +627,7 @@
  * 🎥 [JavaScript Pure vs Impure Functions Explained — Theodore Anderson](https://www.youtube.com/watch?v=AHbRVJzpB54)
  * 🎥 [Pure Functions - Programação Funcional: Parte 1 - Fun Fun Function](https://www.youtube.com/watch?v=BMUiFMZr7vk)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -662,7 +662,7 @@
  * 🎥 [Closures — freeCodeCamp](https://www.youtube.com/watch?v=1JsJx1x35c0)
  * 🎥 [JavaScript Closures — CodeWorkr](https://www.youtube.com/watch?v=-rLrGAXK8WE)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -689,7 +689,7 @@
  * 🎥 [Higher Order Iterators in JavaScript — Fun Fun Function](https://www.youtube.com/watch?v=GYRMNp1SKXA)
  * 🎥 [Higher Order Functions in JavaScript — The Coding Train](https://www.youtube.com/watch?v=H4awPsyugS0)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -719,7 +719,7 @@
  * 🎥 [Javascript Tutorial 34: Introduction To Recursion — codedamn](https://www.youtube.com/watch?v=9NO5dXSlbv8)
  * 🎥 [Recursion, Iteration, and JavaScript: A Love Story | JSHeroes 2018 — Anjana Vakil](https://www.youtube.com/watch?v=FmiQr4nfoPQ)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -754,7 +754,7 @@
  * 🎥 [The Differences between ES6 Maps and Sets — Steve Griffith](https://www.youtube.com/watch?v=m4abICrldQI)
  * 🎥 [Javascript Generators - THEY CHANGE EVERYTHING - ES6 Generators Harmony Generators — LearnCode.academy](https://www.youtube.com/watch?v=QO07THdLWQo)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -787,7 +787,7 @@
  * 🎥 [Error Handling Promises in JavaScript — Fun Fun Function](https://www.youtube.com/watch?v=f8IgdnYIwOU)
  * 🎥 [Promises Part 1 - Topics of JavaScript/ES6 — The Coding Train](https://www.youtube.com/watch?v=QO4NXhWo_NM)
  
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -822,7 +822,7 @@
  * 🎥 [async/await Part 2 - Topics of JavaScript/ES8 — The Coding Train](https://www.youtube.com/watch?v=chavThlNz3s&index=4&list=PLRqwX-V7Uu6bKLPQvPRNNE65kBL62mVfx)
   * 🎥 [Complete Guide to JS Async & Await ES2017/ES8 — Colt Steele](https://www.youtube.com/watch?v=krAYA4rvbdA)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -847,7 +847,7 @@
  * 🎥 [Data Structures and Algorithms in JavaScript — freeCodeCamp](https://www.youtube.com/watch?v=Gj5qBheGOEo&list=PLWKjhJtqVAbkso-IbgiiP48n-O-JQA9PJ)
  * 🎥 [Learning JavaScript Data Structures and Algorithms: Sorting — Packt Video](https://www.youtube.com/watch?v=Ymh_AurrMbA)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -868,7 +868,7 @@
  * 🎥 [Essential Big O for JavaScript Developers — Dave Smith](https://www.youtube.com/watch?v=KatlvCFHPRo)
  * 🎥 [Big O Notation - Time Complexity Analysis — WebTunings](https://www.youtube.com/watch?v=ALl86xJiTD8)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -885,7 +885,7 @@
  * 📜 [Data Structures and Algorithms library in JavaScript](https://github.com/yangshun/lago)
  * 📜 [Collection of computer science algorithms and data structures written in JavaScript](https://github.com/idosela/algorithms-in-javascript)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -908,7 +908,7 @@
  * 🎥 [JavaScript ES6 Classes and Inheritance — Traversy Media](https://www.youtube.com/watch?v=RBLIm5LMrmc)
  * 🎥 [Polymorphism in JavaScript — kudvenkat](https://www.youtube.com/watch?v=zdovG9cuEBA)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -932,7 +932,7 @@
  * 🎥 [JavaScript Design Patterns — Udacity](https://www.udacity.com/course/javascript-design-patterns--ud989)
  * 🎥 [JavaScript Patterns for 2017 — Scott Allen](https://www.youtube.com/watch?v=hO7mzO83N1Q)
 
- **[⬆ トップへ戻る](#-table-of-contents-)**
+ **[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -978,7 +978,7 @@
  * 🎥 [Partial Application vs. Currying — NWCalvank](https://www.youtube.com/watch?v=DzLkRsUN2vE)
  * 🎥 [JavaScript Partial Application — Theodore Anderson](https://www.youtube.com/watch?v=jkebgHEcvac)
 
-**[⬆ トップへ戻る](#-table-of-contents-)**
+**[⬆ トップへ戻る](#目次-table-of-contents-)**
 
 ---
 
@@ -997,4 +997,4 @@
 ### ビデオ
 *  🎥 [JavaScript Pro Tips - Code This, NOT That](https://www.youtube.com/watch?v=Mus_vwhTCq0)
 
- **[⬆ トップへ戻る](#-table-of-contents-)**
+ **[⬆ トップへ戻る](#目次-table-of-contents-)**
