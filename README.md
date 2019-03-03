@@ -61,7 +61,7 @@
 4. **[Implicit, Explicit, Nominal, Structuring and Duck Typing](#4-implicit-explicit-nominal-structuring-and-duck-typing)**
 5. **[== vs === vs typeof](#5--vs--vs-typeof)**
 6. **[関数スコープ、ブロックスコープ、静的スコープ (Function Scope, Block Scope and Lexical Scope)](#6-関数スコープブロックスコープ静的スコープ-function-scope-block-scope-and-lexical-scope)**
-7. **[式 (Expression) vs 文字 (Statement)](#7-式-expression-vs-文字-statement)**
+7. **[式 (Expression) vs 文 (Statement)](#7-式-expression-vs-文-statement)**
 8. **[即時関数、モジュール、名前空間　(IIFE, Modules and Namespaces)](#8-即時関数モジュール名前空間iife-modules-and-namespaces)**
 9. **[メッセージキューとイベントループ (Message Queue and Event Loop)](#9-メッセージキューとイベントループ-message-queue-and-event-loop)**
 10. **[setTimeout, setInterval and requestAnimationFrame](#10-settimeout-setinterval-and-requestanimationframe)**
@@ -242,7 +242,7 @@
 
 ---
 
-## 7. 式 (Expression) vs 文字 (Statement)
+## 7. 式 (Expression) vs 文 (Statement)
 
 ### 記事
 
